@@ -12,5 +12,6 @@ A generic service has been written for obtaining a authenticated credential usin
 
 ```java
 AuthenticationService authenticationService = new AuthenticationService();
-Credential credential = authenticationService.authorise("Token Server URL Here", "Authorisation Server URL Here", "OAuth Key here", "OAuth Secret Here", "Optional Extra Query Args Here");
+Credential credential = authenticationService.authorise("Token Server URL Here", "Authorisation Server URL Here"
+                                              "OAuth Key here", "OAuth Secret Here", "Optional Extra Query Args Here");
 ```
