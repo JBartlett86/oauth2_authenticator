@@ -64,9 +64,10 @@ public class AuthenticationService {
         if (jsonFactory == null) {
             jsonFactory = new JacksonFactory();
         }
-        File DATA_STORE_DIR = new File(System.getProperty("user.home"), ".store/oauth2-"+tokenServerURL);
+        GenericUrl turl = new GenericUrl(tokenServerURL);
+        File DATA_STORE_DIR = new File(System.getProperty("user.home"), ".store/oauth2-"+turl.getHost());
         AuthorizationCodeFlow flow = new AuthorizationCodeFlow.Builder(BearerToken.authorizationHeaderAccessMethod(),
-                httpTransport, jsonFactory, new GenericUrl(tokenServerURL),
+                httpTransport, jsonFactory, turl,
                 new ClientParametersAuthentication(clientId, clientSecret), clientId,
                 authorisationServerURL)
                 .setDataStoreFactory(new FileDataStoreFactory(DATA_STORE_DIR))
