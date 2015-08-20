@@ -4,6 +4,7 @@ A Java based OAuth2 Authenticator built using the [Google Client Java API](https
 
 [![Build Status](https://travis-ci.org/JBartlett86/oauth2_authenticator.svg?branch=master)](https://travis-ci.org/JohnBartlett/oauth2_authenticator)
 [![codecov.io](http://codecov.io/github/JBartlett86/oauth2_authenticator/coverage.svg?branch=master)](http://codecov.io/github/JBartlett86/oauth2_authenticator?branch=master)
+[![Dependency Status](https://www.versioneye.com/user/projects/55d616193b97d40014000101/badge.svg?style=flat)](https://www.versioneye.com/user/projects/55d616193b97d40014000101)
 
 ## Obtaining an authenticated credential
 
