@@ -1,0 +1,12 @@
+language: java
+jdk:
+  - oraclejdk8
+  - oraclejdk7
+sudo: required
+
+before_install: chmod +x ./gradlew
+install: ./gradlew assemble --stacktrace
+script: ./gradlew check
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash)
